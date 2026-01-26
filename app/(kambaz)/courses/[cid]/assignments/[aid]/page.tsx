@@ -1,3 +1,4 @@
+"use client";
 export default function AssignmentEditor() {
   return (
     <div id="wd-assignments-editor">
@@ -5,7 +6,7 @@ export default function AssignmentEditor() {
       <input id="wd-name" defaultValue="A1 - ENV + HTML" style={{ width: "400px", padding: "4px" }} />
       <br /><br />
       <textarea id="wd-assignment-description">
-        The assignment is available online.
+        The assignment is available online. Submit a link to the landing page.
       </textarea>
       <br />
       <table>
@@ -14,7 +15,7 @@ export default function AssignmentEditor() {
             <label htmlFor="wd-points">Points</label>
           </td>
           <td>
-            <input id="wd-points" defaultValue={100} />
+            <input id="wd-points" type="number" defaultValue={100} min={0} />
           </td>
         </tr>
         <br />
@@ -91,16 +92,16 @@ export default function AssignmentEditor() {
             </div>
             <div style={{ marginBottom: "12px" }}>
               <label htmlFor="wd-due-date">Due</label><br />
-              <input type="date" id="wd-due-date" />
+              <input type="date" id="wd-due-date" defaultValue="2026-12-31" />
             </div>
             <div>
               <div style={{ display: "inline-block", marginRight: "16px", textAlign: "left" }}>
                 <label htmlFor="wd-available-from">Available from</label><br />
-                <input type="date" id="wd-available-from" />
+                <input type="date" id="wd-available-from" defaultValue="2026-01-01" />
               </div>
               <div style={{ display: "inline-block", textAlign: "left" }}>
                 <label htmlFor="wd-available-until">Until</label><br />
-                <input type="date" id="wd-available-until" />
+                <input type="date" id="wd-available-until" defaultValue="2026-12-31" />
               </div>
             </div>
           </td>
