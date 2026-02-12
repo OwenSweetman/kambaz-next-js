@@ -1,9 +1,14 @@
 import BackgroundColors from "./BackgroundColors";
+import Borders from "./Borders";
+import Margins from "./Margins";
+import Padding from "./Padding";
 import ForegroundColors from "./ForegroundColors";
 import "./index.css";
+import { Container } from "react-bootstrap";
+import BootstrapGrids from "./BootstrapGrids";
 export default function Lab2() {
   return (
-    <div id="wd-lab2">
+    <Container>
       <h2>Lab 2 - Cascading Style Sheets</h2>
       <h3>Styling with the STYLE attribute</h3>
       <p>
@@ -12,6 +17,10 @@ export default function Lab2() {
       </p>
       <BackgroundColors />
       <ForegroundColors />
+      <Borders />
+      <Padding />
+      <Margins />
+      <BootstrapGrids />
       <div id="wd-css-id-selectors">
         <h3>ID selectors</h3>
         <p id="wd-id-selector-1">
@@ -49,6 +58,6 @@ export default function Lab2() {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
