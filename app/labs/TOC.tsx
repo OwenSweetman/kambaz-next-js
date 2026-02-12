@@ -1,3 +1,4 @@
+"use client";
 import { Nav, NavItem, NavLink } from "react-bootstrap";
 import Link from "next/link";
 export default function TOC() {
