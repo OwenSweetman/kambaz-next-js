@@ -1,3 +1,4 @@
+"use client";
 import { ListGroup } from "react-bootstrap";
 import { FaEllipsisV } from "react-icons/fa";
 import ModulesControls from "./modulesControls";

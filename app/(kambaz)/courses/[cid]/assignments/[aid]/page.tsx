@@ -1,3 +1,4 @@
+"use client";
 import { Button, Form } from "react-bootstrap";
 export default function EditAssignment() {
   return (

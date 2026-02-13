@@ -1,6 +1,6 @@
+"use client";
 import Link from "next/link";
 import { Row, Col, Card, CardBody, CardImg, CardTitle, CardText, Button } from "react-bootstrap";
-
 export default function Dashboard() {
   return (
     <div id="wd-dashboard">

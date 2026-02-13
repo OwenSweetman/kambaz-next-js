@@ -1,3 +1,4 @@
+"use client";
 import { Button, FormControl, InputGroup, ListGroup } from "react-bootstrap";
 import { FaPlus } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";

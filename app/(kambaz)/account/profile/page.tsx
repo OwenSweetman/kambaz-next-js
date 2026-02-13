@@ -1,3 +1,4 @@
+"use client";
 import { FormControl, Button } from "react-bootstrap";
 export default function Profile() {
   return (

@@ -1,6 +1,6 @@
+"use client";
 import Link from "next/link";
 import { FormControl } from "react-bootstrap";
-
 export default function Signin() {
   return (
     <div id="wd-signin-screen" className="p-5" style={{ maxWidth: "400px" }}>
