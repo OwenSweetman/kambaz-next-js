@@ -33,7 +33,7 @@ export default function Assignments() {
       <ListGroup className="rounded-0">
         <ListGroup.Item className="border-start border-4 border-success">
           <GreenCheckmark />
-          <Link href="/kambaz/courses/1234/assignments/1"
+          <Link href="./assignments/1"
             className="fw-bold text-decoration-none text-dark ms-2">
             A1 - HTML
           </Link>
@@ -44,7 +44,7 @@ export default function Assignments() {
         </ListGroup.Item>
         <ListGroup.Item className="border-start border-4 border-success">
           <GreenCheckmark />
-          <Link href="/kambaz/courses/1234/assignments/2"
+          <Link href="./assignments/2"
             className="fw-bold text-decoration-none text-dark ms-2">
             A2 - CSS
           </Link>
