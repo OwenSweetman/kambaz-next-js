@@ -1,51 +1,48 @@
+import { ListGroup } from "react-bootstrap";
+import { FaEllipsisV } from "react-icons/fa";
+import ModulesControls from "./modulesControls";
+import LessonControlButtons from "./LessonControlButtons";
+import ModuleControlButtons from "./ModuleControlButtons";
 export default function Modules() {
   return (
     <div>
-      <button id="wd-collapse-all">Collapse All</button>
-      <button id="wd-view-progress">View Progress</button>
-      <select id="wd-publish-all">
-        <option value="publish">Publish All</option>
-        <option value="unpublish">Unpublish All</option>
-      </select>
-      <button id="wd-add-module">+ Module</button>
-      <ul id="wd-modules">
-        <li className="wd-module">
-          <div className="wd-title">Lecture 1 - Building React User Interfaces</div>
-          <ul className="wd-lessons">
-            <li className="wd-lesson">
-              <span className="wd-title">LEARNING OBJECTIVES</span>
-              <ul className="wd-content">
-                <li className="wd-content-item">Introduction to the course</li>
-                <li className="wd-content-item">What is Web Development?</li>
-                <li className="wd-content-item">Setting up the Development Environment</li>
-                <li className="wd-content-item">Creating a React Application</li>
-                <li className="wd-content-item">Getting started with the Assignment 1</li>
-              </ul>
-            </li>
-            <li className="wd-lesson">
-              <span className="wd-title">READING</span>
-              <ul className="wd-content">
-                <li className="wd-content-item">Full Stack Developer - Chapter 1 - Introduction</li>
-                <li className="wd-content-item">Full Stack Developer - Chapter 2 - Creating User Interfaces</li>
-              </ul>
-            </li>
-            <li className="wd-lesson">
-              <span className="wd-title">SLIDES</span>
-              <ul className="wd-content">
-                <li className="wd-content-item">Introduction to Web Development</li>
-                <li className="wd-content-item">Installing Node.js</li>
-                <li className="wd-content-item">Creating a Next.js React Application</li>
-                <li className="wd-content-item">Commit your source to GitHub.com</li>
-                <li className="wd-content-item">Deploying to Vercel</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li className="wd-module">
-          <div className="wd-title">Lecture 2</div> </li>
-        <li className="wd-module">
-          <div className="wd-title">Lecture 3</div> </li>
-      </ul>
+      <ModulesControls /><br /><br />
+      <ListGroup id="wd-modules">
+        <ListGroup.Item className="wd-module p-0 mb-5 fs-5 border-gray">
+          <div className="wd-title p-3 ps-2 bg-secondary">
+            <FaEllipsisV className="me-2 fs-4" />
+            Lecture 1 - Building React User Interfaces
+            <ModuleControlButtons />
+          </div>
+          <ListGroup className="wd-lessons rounded-0">
+            <ListGroup.Item className="wd-lesson p-3 ps-1">
+              <FaEllipsisV className="me-2 fs-4" />
+              LEARNING OBJECTIVES
+              <LessonControlButtons />
+            </ListGroup.Item>
+            <ListGroup.Item className="wd-lesson p-3 ps-1">
+              <FaEllipsisV className="me-2 fs-4" />
+              READING
+              <LessonControlButtons />
+            </ListGroup.Item>
+            <ListGroup.Item className="wd-lesson p-3 ps-1">
+              <FaEllipsisV className="me-2 fs-4" />
+              SLIDES
+              <LessonControlButtons />
+            </ListGroup.Item>
+          </ListGroup>
+        </ListGroup.Item>
+        <ListGroup.Item className="wd-module p-3 mb-5 fs-5 border-gray bg-secondary">
+          <FaEllipsisV className="me-2 fs-4" />
+          Lecture 2
+          <ModuleControlButtons />
+        </ListGroup.Item>
+        <ListGroup.Item className="wd-module p-3 mb-5 fs-5 border-gray bg-secondary">
+          <FaEllipsisV className="me-2 fs-4" />
+          Lecture 3
+          <ModuleControlButtons />
+        </ListGroup.Item>
+      </ListGroup>
     </div>
   );
 }
