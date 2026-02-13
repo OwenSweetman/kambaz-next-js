@@ -1,117 +1,38 @@
-"use client";
-export default function AssignmentEditor() {
+import { Button, Form } from "react-bootstrap";
+export default function EditAssignment() {
   return (
-    <div id="wd-assignments-editor">
-      <h2>Assignment Name</h2>
-      <input id="wd-name" defaultValue="A1 - ENV + HTML" style={{ width: "400px", padding: "4px" }} />
-      <br /><br />
-      <textarea id="wd-assignment-description">
-        The assignment is available online. Submit a link to the landing page.
-      </textarea>
-      <br />
-      <table>
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-points">Points</label>
-          </td>
-          <td>
-            <input id="wd-points" type="number" defaultValue={100} min={0} />
-          </td>
-        </tr>
-        <br />
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-assignment-group">Assignment Group</label>
-          </td>
-          <td>
-            <select id="wd-assignment-group">
-              <option>ASSIGNMENTS</option>
-              <option>QUIZZES</option>
-              <option>PROJECTS</option>
-              <option>EXAMS</option>
-            </select>
-          </td>
-        </tr>
-        <br />
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-display-grade">Display Grade as</label>
-          </td>
-          <td>
-            <select id="wd-display-grade">
-              <option>Percentage</option>
-              <option>Points</option>
-              <option>Letter Grade</option>
-            </select>
-          </td>
-        </tr>
-        <br />
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-submission-type">Submission Type</label>
-          </td>
-          <td>
-            <select id="wd-submission-type">
-              <option>Online</option>
-              <option>On Paper</option>
-              <option>No Submission</option>
-            </select>
-          </td>
-        </tr>
-        <br />
-        <tr>
-          <td></td>
-          <td style={{ paddingLeft: "0px" }}>
-            Online Entry Options<br />
-            <label style={{ display: "block", marginLeft: "0px" }}>
-              <input type="checkbox" /> Text Entry
-            </label>
-            <label style={{ display: "block", marginLeft: "0px" }}>
-              <input type="checkbox" /> Website URL
-            </label>
-            <label style={{ display: "block", marginLeft: "0px" }}>
-              <input type="checkbox" /> Media Recordings
-            </label>
-            <label style={{ display: "block", marginLeft: "0px" }}>
-              <input type="checkbox" /> Student Annotations
-            </label>
-            <label style={{ display: "block", marginLeft: "0px" }}>
-              <input type="checkbox" /> File Uploads
-            </label>
-          </td>
-        </tr>
-        <br />
-        <tr>
-          <td align="right" valign="top">
-            Assign
-          </td>
-          <td>
-            <div style={{ marginBottom: "12px" }}>
-              <label htmlFor="wd-assign-to">Assign to</label><br />
-              <input id="wd-assign-to" defaultValue="Everyone" />
-            </div>
-            <div style={{ marginBottom: "12px" }}>
-              <label htmlFor="wd-due-date">Due</label><br />
-              <input type="date" id="wd-due-date" defaultValue="2026-12-31" />
-            </div>
-            <div>
-              <div style={{ display: "inline-block", marginRight: "16px", textAlign: "left" }}>
-                <label htmlFor="wd-available-from">Available from</label><br />
-                <input type="date" id="wd-available-from" defaultValue="2026-01-01" />
-              </div>
-              <div style={{ display: "inline-block", textAlign: "left" }}>
-                <label htmlFor="wd-available-until">Until</label><br />
-                <input type="date" id="wd-available-until" defaultValue="2026-12-31" />
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
-      <hr style={{ border: ".5px solid black", margin: "8px 0" }} />
-      <div style={{ textAlign: "right" }}>
-        <button id="wd-cancel">Cancel</button>
-        <button id="wd-save">Save</button>
-      </div>
+    <div id="wd-edit-assignment-screen" className="p-4">
+      <Form>
+        <Form.Group className="mb-3">
+          <Form.Label>Assignment Name</Form.Label>
+          <Form.Control type="text"
+            defaultValue="A1 - HTML" />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Description</Form.Label>
+          <Form.Control as="textarea"
+            rows={6}
+            defaultValue="Assignment description here..." />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Points</Form.Label>
+          <Form.Control type="number"
+            defaultValue={100} />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Due Date</Form.Label>
+          <Form.Control type="date" />
+        </Form.Group>
+        <div className="text-end">
+          <Button variant="secondary"
+            className="me-2">
+            Cancel
+          </Button>
+          <Button variant="danger">
+            Save
+          </Button>
+        </div>
+      </Form>
     </div>
   );
 }

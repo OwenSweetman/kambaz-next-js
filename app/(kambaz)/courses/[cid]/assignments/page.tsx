@@ -1,53 +1,57 @@
+import { Button, FormControl, InputGroup, ListGroup } from "react-bootstrap";
+import { FaPlus } from "react-icons/fa6";
+import { FaSearch } from "react-icons/fa";
+import GreenCheckmark from "../modules/GreenCheckmark";
 import Link from "next/link";
 export default function Assignments() {
   return (
-    <div id="wd-assignments">
-      <input placeholder="Search for Assignments"
-        id="wd-search-assignment" />
-      <button id="wd-add-assignment-group">+ Group</button>
-      <button id="wd-add-assignment">+ Assignment</button>
-      <h3 id="wd-assignments-title">
-        ASSIGNMENTS 40% of Total <button>+</button>
-      </h3>
-      <ul id="wd-assignment-list">
-        <li className="wd-assignment-list-item">
-          <Link href="/courses/1234/assignments/123"
-            className="wd-assignment-link">
-            A1 - ENV + HTML
+    <div id="wd-assignments-screen" className="p-3">
+      <div className="mb-3">
+        <Button variant="danger"
+          className="float-end ms-2"
+          id="wd-add-assignment-btn">
+          <FaPlus className="me-2" />
+          Assignment
+        </Button>
+        <Button variant="secondary"
+          className="float-end"
+          id="wd-add-group-btn">
+          <FaPlus className="me-2" />
+          Group
+        </Button>
+        <InputGroup className="w-50">
+          <InputGroup.Text>
+            <FaSearch />
+          </InputGroup.Text>
+          <FormControl
+            id="wd-search-assignment"
+            placeholder="Search for Assignment" />
+        </InputGroup>
+      </div>
+      <div className="clearfix"></div>
+      <ListGroup className="rounded-0">
+        <ListGroup.Item className="border-start border-4 border-success">
+          <GreenCheckmark />
+          <Link href="/kambaz/courses/1234/assignments/1"
+            className="fw-bold text-decoration-none text-dark ms-2">
+            A1 - HTML
           </Link>
-          <div className="wd-assignment-details">
-            <span>Multiple Modules</span> | 
-            <span><b> Not available until</b> May 6 at 12:00am</span> | 
-            <span><b> Due</b> May 13 at 11:59pm</span> | 
-            <span> 100 pts</span>
+          <div className="text-muted small ms-4">
+            Multiple Modules | <span className="text-danger">Not available until</span> May 6 at 12:00am |
+            <span className="text-success"> Due</span> May 13 at 11:59pm | 100 pts
           </div>
-        </li>
-        <li className="wd-assignment-list-item">
-          <Link href="/courses/1234/assignments/124"
-            className="wd-assignment-link">
-            A2 - CSS + BOOTSTRAP
+        </ListGroup.Item>
+        <ListGroup.Item className="border-start border-4 border-success">
+          <GreenCheckmark />
+          <Link href="/kambaz/courses/1234/assignments/2"
+            className="fw-bold text-decoration-none text-dark ms-2">
+            A2 - CSS
           </Link>
-          <div className="wd-assignment-details">
-            <span>Multiple Modules</span> | 
-            <span><b> Not available until</b> May 13 at 12:00am</span> | 
-            <span><b> Due</b> May 20 at 11:59pm</span> | 
-            <span> 100 pts</span>
+          <div className="text-muted small ms-4">
+            Multiple Modules | <span className="text-success">Due</span> May 20 at 11:59pm | 100 pts
           </div>
-        </li>
-        <li className="wd-assignment-list-item">
-          <Link href="/courses/1234/assignments/125"
-            className="wd-assignment-link">
-            A3 - JAVASCRIPT + REACT
-          </Link>
-          <div className="wd-assignment-details">
-            <span>Multiple Modules</span> | 
-            <span><b> Not available until</b> May 20 at 12:00am</span> | 
-            <span><b> Due</b> May 27 at 11:59pm</span> | 
-            <span> 100 pts</span>
-          </div>
-        </li>
-      </ul>
+        </ListGroup.Item>
+      </ListGroup>
     </div>
   );
 }
-
